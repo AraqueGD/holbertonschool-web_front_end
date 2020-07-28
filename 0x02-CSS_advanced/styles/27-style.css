@@ -85,6 +85,21 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  color: var(--text-color);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+}
+
+[data-section-theme="dark"] {
+  --text-color: var(--color-white);
+  --section-title-color: var(--color-white);
+  background-color: var(--color-black);
+  --button-color: var(--color-white);
+}
+
 .navbar-menu {
   float: right;
 }
@@ -92,7 +107,7 @@ html {
 .nav {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   text-align: center;
 }
 
@@ -124,22 +139,9 @@ h6 {
   font-weight: var(--font-weight-bold);
 }
 
-body {
-  color: var(--text-color);
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-base);
-}
-
-a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
 a:link {
   color: var(--text-color);
-  font-weight: var(--font-weight-bold);
+  text-decoration: none;
 }
 
 a:visited {
@@ -151,7 +153,19 @@ a:hover {
 }
 
 a:active {
-  color: var(--color-light-grey);
+  background-color: var(--color-light-grey);
+}
+
+.section-hero {
+  background-size: 90rem auto;
+}
+
+.section-hero .section-title {
+  margin-bottom: 5rem;
+}
+
+.section-hero .section-inner {
+  padding: 10rem 40rem 2rem 0;
 }
 
 .button {
@@ -159,13 +173,14 @@ a:active {
   padding: var(--button-padding);
   border: var(--button-border);
   font-size: var(--button-font-size);
+  color: var(--button-color);
   text-decoration: var(--button-text-decoration);
 }
 
 .button:hover {
   color: var(--button-hover-color);
   text-decoration: var(--button-hover-text-decoration);
-  background-color: var(--button-hover-background);
+  background: var(--button-hover-background);
 }
 
 .visually-hidden {
@@ -183,6 +198,38 @@ a:active {
 .section-header {
   text-align: var(--section-header-align);
   padding: var(--section-header-padding);
+}
+
+.card-services .card-title {
+  margin: 0;
+}
+
+.card-services a {
+  display: block;
+  padding: 2rem;
+  background-color: var(--color-light-grey);
+}
+
+.card-services a:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  text-decoration: none;
+}
+
+.card-testimonial {
+  text-align: center;
+}
+
+.card-testimonial .card-avatar {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+}
+
+.card-testimonial .card-quote cite {
+  display: block;
+  padding-top: 1rem;
+  color: var(--color-primary);
 }
 
 .section-body {
@@ -210,16 +257,29 @@ a:active {
   margin: var(--section-tagline-margin);
 }
 
-.section-hero {
-  background-size: 90rem auto;
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.section-hero .section-title {
-  margin: 5rem;
+ul.row {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.section-hero .section-inner {
-  padding: 10rem 40rem 2rem 0;
+.col-1-3 {
+  width: 33.33%;
+}
+
+.col-1-2 {
+  width: 50%;
+}
+
+[class^="col-"] {
+  float: left;
+  padding: 0.5rem;
 }
 
 .container {
@@ -228,27 +288,8 @@ a:active {
   margin-right: auto;
 }
 
-ul.row {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.col-1-3 {
-  width: 33.33%;
-  float: left;
-  padding: 0.5rem;
-}
-
-.col-1-2 {
-  width: 50%;
-  float: left;
-  padding: 0.5rem;
-}
-
-[class^="col-"] {
-  float: left;
-  padding: 0.5rem;
+.footer {
+  padding: var(--footer-padding);
 }
 
 .footer-copyright {
@@ -271,50 +312,6 @@ ul.row {
 
 .social-link > svg {
   fill: var(--text-color);
-}
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-[data-section-theme="dark"] {
-  --text-color: var(--color-white);
-  --section-title-color: var(--color-white);
-  background-color: var(--color-black);
-  --button-color: var(--color-white);
-}
-
-.card-services .card-title {
-  margin: 0;
-}
-
-.card-services a {
-  display: block;
-  margin: 2rem;
-  background-color: var(--color-light-grey);
-}
-
-.card-services a:hover {
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  text-decoration: none;
-}
-
-.card-testimonial {
-  text-align: center;
-}
-
-.card-testimonial .card-avatar {
-  border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
-}
-
-.card-testimonial .card-quote cite {
-  display: block;
-  padding-top: 1rem;
-  color: var(--color-primary);
 }
 
 html {
