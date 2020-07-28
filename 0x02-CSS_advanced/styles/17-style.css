@@ -62,14 +62,15 @@ html {
   font-size: 62.5%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-family-title);
-  font-weight: var(--font-weight-bold);
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
@@ -80,14 +81,19 @@ body {
   line-height: var(--line-height-base);
 }
 
-a {
-  color: var(--text-color);
-  text-decoration: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-bold);
 }
 
 a:link {
   color: var(--text-color);
-  font-weight: var(--font-weight-bold);
+  text-decoration: none;
 }
 
 a:visited {
@@ -99,7 +105,7 @@ a:hover {
 }
 
 a:active {
-  color: var(--color-light-grey);
+  background-color: var(--color-light-grey);
 }
 
 .visually-hidden {
@@ -147,6 +153,10 @@ a:active {
   width: 960px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.footer {
+  padding: var(--footer-padding);
 }
 
 html {
