@@ -36,6 +36,14 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  color: var(--text-color);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+}
+
 h1,
 h2,
 h3,
@@ -44,14 +52,6 @@ h5,
 h6 {
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-bold);
-}
-
-body {
-  color: var(--text-color);
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-base);
 }
 
 a:link {
@@ -68,7 +68,7 @@ a:hover {
 }
 
 a:active {
-  color: var(--color-light-grey);
+  background-color: var(--color-light-grey);
 }
 
 .visually-hidden {
