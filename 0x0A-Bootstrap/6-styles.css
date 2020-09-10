@@ -1,0 +1,52 @@
+:root {
+  --color-red: #e0003c;
+  --dark-red: #bc1340;
+  --color-grey: #8c8c8c;
+  --color-white: white;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+  color: var(--color-red) !important;
+}
+
+.btn-outline-primary {
+  color: var(--color-red) !important;
+  border-color: var(--color-red) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background-color: var(--color-red) !important;
+  color: var(--color-white) !important;
+}
+
+.border-bottom {
+  border-color: var(--color-red) !important;
+}
+
+.btn-primary {
+  background-color: var(--color-red) !important;
+  border-color: var(--color-red) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--dark-red) !important;
+  border-color: var(--dark-red);
+}
+
+.card-header,
+.card-footer {
+  background-color: var(--color-red) !important;
+  color: var(--color-white) !important;
+}
+
+a:focus,
+a:active,
+a:hover {
+  color: var(--color-red) !important;
+}
